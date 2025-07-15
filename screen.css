@@ -10,46 +10,51 @@ a.active {
 }
 
 body {
-  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f9fafb;
-  color: #1f2937;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #FFFFFF;
+  color: #18453B; /* MSU Green */
   line-height: 1.6;
 }
 
 /* Container */
 .container {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: auto;
-  padding: 0 2rem;
+  padding: 0 1.5rem;
 }
 
 /* Navbar */
 nav {
-  background-color: #1e3a8a;
+  background-color: #18453B; /* MSU Green */
   padding: 1rem 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-shadow: 0 3px 6px rgba(24, 69, 59, 0.5);
 }
 
 .logo {
-  color: #ffffff;
-  font-weight: bold;
-  font-size: 1.8rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 1.9rem;
+  letter-spacing: 2px;
+  font-family: 'Georgia', serif;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 1.8rem;
 }
 
 .nav-links li a {
-  color: #cbd5e1;
+  color: #d4d4d4;
   text-decoration: none;
+  font-weight: 600;
   transition: color 0.3s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .nav-links li a:hover {
-  color: #ffffff;
+  color: #FFFFFF;
+  border-bottom: 2px solid #FFFFFF;
 }
 
 nav .container {
@@ -61,48 +66,53 @@ nav .container {
 /* Header Section */
 header {
   text-align: center;
-  padding: 4rem 2rem;
-  background: linear-gradient(to right, #3b82f6, #1d4ed8);
+  padding: 5rem 2rem;
+  background: #18453B; /* MSU Green */
   color: white;
+  font-family: 'Georgia', serif;
 }
 
 .profile-pic {
-  width: 160px;
-  height: 160px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   border: 5px solid white;
   object-fit: cover;
   margin-bottom: 1.5rem;
+  box-shadow: 0 0 15px rgba(24, 69, 59, 0.7);
 }
 
 header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 2.8rem;
+  margin-bottom: 0.6rem;
+  letter-spacing: 2px;
 }
 
 header p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   max-width: 600px;
   margin: 0 auto;
+  font-weight: 400;
 }
 
 /* Main Sections */
 main {
-  padding: 2rem 0;
+  padding: 2.5rem 0;
 }
 
 section {
-  background-color: white;
-  margin-bottom: 2rem;
-  padding: 2rem;
+  background-color: #e7f0eb; /* soft pale green */
+  margin-bottom: 2.5rem;
+  padding: 2rem 2.5rem;
   border-radius: 1rem;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 3px 10px rgba(24, 69, 59, 0.15);
 }
 
 h2 {
-  font-size: 1.75rem;
-  color: #1e3a8a;
+  font-size: 2rem;
+  color: #18453B;
   margin-bottom: 1rem;
+  font-family: 'Georgia', serif;
 }
 
 ul {
@@ -111,16 +121,19 @@ ul {
 }
 
 ul li {
-  margin-bottom: 0.75rem;
-  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  padding-left: 1.6rem;
   position: relative;
+  font-weight: 600;
+  color: #12332d; /* darker green */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 ul li::before {
   content: "✔";
   position: absolute;
   left: 0;
-  color: #10b981;
+  color: #2e7d32; /* MSU green checkmark */
   font-weight: bold;
 }
 
@@ -128,29 +141,32 @@ ul li::before {
 .social-links {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.6rem;
   margin-top: 1rem;
 }
 
 .social-links a {
-  color: #2563eb;
+  color: #18453B;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   transition: all 0.3s ease;
 }
 
 .social-links a:hover {
+  color: #388e3c; /* brighter green */
   text-decoration: underline;
-  color: #1e40af;
 }
 
 /* Footer */
 footer {
-  background-color: #1e3a8a;
+  background-color: #18453B;
   color: white;
   text-align: center;
-  padding: 1rem;
-  font-size: 0.875rem;
+  padding: 1.2rem;
+  font-size: 0.9rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 1px;
 }
 
 /* Responsive Nav */
@@ -158,10 +174,11 @@ footer {
   .nav-links {
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
   }
 
   header h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .profile-pic {
