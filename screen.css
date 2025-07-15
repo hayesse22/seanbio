@@ -56,7 +56,6 @@ nav {
 .msu-logo {
   width: 28px;
   height: auto;
-  filter: brightness(0) invert(1);
   vertical-align: middle;
 }
 
