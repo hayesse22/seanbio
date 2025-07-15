@@ -71,7 +71,7 @@ nav {
   display: flex;
   justify-content: space-evenly;  /* distributes links evenly */
   flex: 1;                        /* takes up remaining nav space */
-  max-width: 1000px;               /* optional: limits how wide it spreads */
+  max-width: 1100px;               /* optional: limits how wide it spreads */
   padding-left: 0;
 }
 
