@@ -69,7 +69,10 @@ nav {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  justify-content: space-evenly;  /* distributes links evenly */
+  flex: 1;                        /* takes up remaining nav space */
+  max-width: 700px;               /* optional: limits how wide it spreads */
+  padding-left: 0;
 }
 
 .nav-links a {
