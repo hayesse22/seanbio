@@ -7,186 +7,190 @@ a.active {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #FFFFFF;
-  color: #18453B; /* MSU Green */
   line-height: 1.6;
+  background-color: #ffffff;
+  color: #1d1d1d;
 }
 
-/* Container */
+/* MSU Colors */
+:root {
+  --msu-green: #18453b;
+  --msu-light-green: #1e5631;
+  --msu-gray: #eeeeee;
+  --msu-white: #ffffff;
+  --text-dark: #0c0c0c;
+}
+
+/* Container utility */
 .container {
+  width: 90%;
   max-width: 1100px;
   margin: auto;
-  padding: 0 1.5rem;
-}
-
-/* Navbar */
-nav {
-  background-color: #18453B; /* MSU Green */
-  padding: 1rem 0;
-  box-shadow: 0 3px 6px rgba(24, 69, 59, 0.5);
-}
-
-.logo {
-  color: #FFFFFF;
-  font-weight: 700;
-  font-size: 1.9rem;
-  letter-spacing: 2px;
-  font-family: 'Georgia', serif;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.8rem;
-}
-
-.nav-links li a {
-  color: #d4d4d4;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.nav-links li a:hover {
-  color: #FFFFFF;
-  border-bottom: 2px solid #FFFFFF;
-}
-
-nav .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* Header Section */
+/* Navbar */
+nav {
+  background-color: var(--msu-green);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 1rem 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.msu-logo {
+  width: 28px;
+  height: auto;
+  filter: brightness(0) invert(1);
+  vertical-align: middle;
+}
+
+.site-name {
+  color: var(--msu-white);
+  font-weight: 700;
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: var(--msu-white);
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: var(--msu-white);
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Header / Home Section */
 header {
+  background: var(--msu-green);
+  color: var(--msu-white);
   text-align: center;
-  padding: 5rem 2rem;
-  background: #18453B; /* MSU Green */
-  color: white;
-  font-family: 'Georgia', serif;
+  padding: 4rem 2rem;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: auto;
 }
 
 .profile-pic {
   width: 140px;
   height: 140px;
   border-radius: 50%;
-  border: 5px solid white;
+  border: 4px solid var(--msu-white);
   object-fit: cover;
   margin-bottom: 1.5rem;
-  box-shadow: 0 0 15px rgba(24, 69, 59, 0.7);
 }
 
-header h1 {
-  font-size: 2.8rem;
-  margin-bottom: 0.6rem;
-  letter-spacing: 2px;
-}
-
-header p {
-  font-size: 1.3rem;
-  max-width: 600px;
-  margin: 0 auto;
-  font-weight: 400;
-}
-
-/* Main Sections */
-main {
-  padding: 2.5rem 0;
-}
-
+/* Sections */
 section {
-  background-color: #e7f0eb; /* soft pale green */
-  margin-bottom: 2.5rem;
-  padding: 2rem 2.5rem;
-  border-radius: 1rem;
-  box-shadow: 0 3px 10px rgba(24, 69, 59, 0.15);
+  padding: 4rem 2rem;
+  background-color: var(--msu-gray);
+  animation: fadeIn 1s ease;
 }
 
-h2 {
+section:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+section h2 {
   font-size: 2rem;
-  color: #18453B;
+  color: var(--msu-green);
   margin-bottom: 1rem;
-  font-family: 'Georgia', serif;
+  border-left: 4px solid var(--msu-green);
+  padding-left: 0.75rem;
 }
 
-ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-ul li {
-  margin-bottom: 1rem;
-  padding-left: 1.6rem;
-  position: relative;
-  font-weight: 600;
-  color: #12332d; /* darker green */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-ul li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  color: #2e7d32; /* MSU green checkmark */
-  font-weight: bold;
-}
-
-/* Social Links */
-.social-links {
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
+section ul {
+  padding-left: 1.2rem;
   margin-top: 1rem;
 }
 
-.social-links a {
-  color: #18453B;
-  text-decoration: none;
-  font-weight: 700;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  transition: all 0.3s ease;
-}
-
-.social-links a:hover {
-  color: #388e3c; /* brighter green */
-  text-decoration: underline;
+section ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
 }
 
 /* Footer */
 footer {
-  background-color: #18453B;
-  color: white;
+  background-color: var(--msu-green);
+  color: var(--msu-white);
   text-align: center;
-  padding: 1.2rem;
+  padding: 1rem 0;
   font-size: 0.9rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  letter-spacing: 1px;
 }
 
 /* Responsive Nav */
 @media (max-width: 768px) {
-  .nav-links {
+  nav .container {
     flex-direction: column;
     align-items: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
     gap: 1rem;
+    margin-top: 1rem;
   }
 
   header h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
-  .profile-pic {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    border: 5px solid white;
-    object-fit: cover;
-    margin-bottom: 1.5rem;
+  .site-name {
+    font-size: 1.4rem;
+  }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
