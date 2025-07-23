@@ -222,6 +222,7 @@ footer {
   border-radius: 8px;
   width: 100%;
   box-sizing: border-box;
+  margin-top: 1rem;
 }
 
 .education-entry h3 {
