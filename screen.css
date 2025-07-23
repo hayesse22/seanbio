@@ -212,6 +212,8 @@ footer {
   margin-bottom: 2rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .education-entry h3 {
@@ -247,4 +249,10 @@ footer {
   margin-right: 2rem; /* ✅ Adds space below the heading */
   color: var(--msu-green);
   text-align: center;
+}
+
+#education .container {
+  display: block;
+  max-width: 800px;
+  margin: 0 auto;
 }
