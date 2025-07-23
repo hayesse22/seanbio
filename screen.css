@@ -270,3 +270,9 @@ footer {
   font-size: 2rem;
   color: var(--msu-green);
 }
+
+#education .container .section-title h2{
+  display: block;
+  max-width: 800px;
+  margin: 0 auto;
+}
