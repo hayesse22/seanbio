@@ -241,3 +241,10 @@ footer {
 .education-entry li {
   margin-bottom: 0.4rem;
 }
+
+#education h2 {
+  font-size: 2rem;
+  margin-right: 2rem; /* ✅ Adds space below the heading */
+  color: var(--msu-green);
+  text-align: center;
+}
