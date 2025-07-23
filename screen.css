@@ -291,3 +291,11 @@ footer {
   max-width: 800px;
   margin: 0 auto;
 }
+
+main #contactme {
+  text-align: center;
+}
+
+main #myinfo {
+  text-align: center;
+}
