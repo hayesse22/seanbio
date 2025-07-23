@@ -223,6 +223,12 @@ footer {
   width: 100%;
   box-sizing: border-box;
   margin-top: 1rem;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.education-entry:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
 }
 
 .education-entry h3 {
