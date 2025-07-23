@@ -256,3 +256,15 @@ footer {
   max-width: 800px;
   margin: 0 auto;
 }
+
+.section-title {
+  border-left: 4px solid var(--msu-green);
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+}
+
+.section-title h2 {
+  margin: 0;
+  font-size: 2rem;
+  color: var(--msu-green);
+}
