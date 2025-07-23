@@ -147,6 +147,13 @@ section h2 {
   padding-left: 0.75rem;
 }
 
+section h4 {
+  font-size: 2rem;
+  color: var(--msu-green);
+  margin-bottom: 1rem;
+  padding-left: 0.75rem;
+}
+
 section ul {
   padding-left: 1.2rem;
   margin-top: 1rem;
