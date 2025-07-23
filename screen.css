@@ -246,7 +246,7 @@ footer {
 
 #education h2 {
   font-size: 2rem;
-  margin-right: 2rem; /* ✅ Adds space below the heading */
+  margin-bottom: 2.5rem;
   color: var(--msu-green);
   text-align: center;
 }
